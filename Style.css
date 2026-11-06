@@ -68,7 +68,14 @@ h1 {
   color: rgb(166, 33, 33);
 }
 
-ul,
+ul {
+  display: inline-block;
+  padding-left: 1em;
+  text-align: left;
+  margin-top: 8px;
+}
+
+
 ol {
   display: inline-block;
   padding-left: 2em;
