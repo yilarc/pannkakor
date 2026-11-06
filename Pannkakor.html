@@ -1,44 +1,63 @@
 <!doctype html>
 <html lang="sv-SE">
-  <head>
-    <meta charset="utf-8" />
-    <title>Pannkakor</title>
-    <link rel="stylesheet" href="PannkakorStyle.css">
-  </head>
-  <body>
-    <main class="page">
-    <img class="image-width top-image"
-       src="images/pancakes-top.jpg"
-       alt="A stack of pancakes">
+  
+<head>
+  <meta charset="utf-8" />
+  <title>Pannkakor</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">
+      Hoppa till huvudinnehåll</a>
+  
+  <!-- <header class="top-container"> 
+ 
+  </header> -->
+
+  <main class="page" id="main-content" >
+    
+    <figure class="top-image">
+      <img src="images/pancakes-top.jpg" alt="Pannkakor med blåbär och grädde">
+    </figure>
+
     <h1>Enkelt recept på pannkakor</h1>
     <p class="intro-paragraph">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
 
-<h2>Ingredienser</h2>
-<p>För 4 portioner</p>
-<ul>
-  <li>2 2/1 dl vetemjöl</li>
-  <li>6 dl mjölk</li>
-  <li>1/2 tsk salt</li>
-  <li>3 ägg</li>
-  <li>sylt, bär eller frukt</li>
-  <li>smör till stekning</li>
-</ul>
+    <section id="ingredients">
+      <h2>Ingredienser</h2>
+      <p>För 4 portioner</p>
+      <ul>
+        <li><label><input type="checkbox"> 2 1/2 dl vetemjöl </label></li>
+        <li><label><input type="checkbox"> 6 dl mjölk</label></li>
+        <li><label><input type="checkbox"> 1/2 tsk salt</label></li>
+        <li><label><input type="checkbox"> 3 ägg</label></li>
+        <li><label><input type="checkbox"> sylt, bär eller frukt</label></li>
+        <li><label><input type="checkbox"> smör till stekning</label></li>
+      </ul>
+    </section>
 
-<h2>Så här gör du</h2>
-<ol>
-  <li>Blanda mjöl och salt i en bunke</li>
-  <li>Andra numrerade punkten</li>
-  <li>Tredje punkten</li>
-  <li>Fjärde punkten</li>
-  <li>Femte punkten</li>
-  <li>Sjätte punkten</li>
-</ol>
-  
-<h2>Serveringsförslag</h2>
-<div class="image-width bottom-images">
-    <img src="images/pancakes-left.jpg" alt="Pancakes with toppings">
-    <img src="images/pancakes-right.jpg" alt="Pancakes with toppings">
-  </div>
-    </main>
-  </body>
+    <section id="instructions">
+      <h2>Så här gör du</h2>
+      <ol>
+        <li>Blanda mjöl och salt i en bunke</li>
+        <li>Andra numrerade punkten</li>
+        <li>Tredje punkten</li>
+        <li>Fjärde punkten</li>
+        <li>Femte punkten</li>
+        <li>Sjätte punkten</li>
+      </ol>
+    </section>
+      
+    <section id="servering suggestions">
+      <h3>Serveringsförslag</h3>
+      <figure class="image-width bottom-images">
+        <img src="images/pancakes-left.jpg" alt="Pannkakor med jordgubbar">
+        <img src="images/pancakes-right.jpg" alt="Pannkakor med hallon och grädde">
+        <figcaption>Servera pannkakorna med sylt, bär eller frukt.</figcaption>
+        <figcaption>Serveringsförslag.</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
 </html>
