@@ -38,6 +38,23 @@ Easy way to remember
 
 
                                                 Vecka 2
+
+
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 box-sizing: border-box;
 gör boxen så stor du anger, all padding och border sker inne i boxen 
 (default är att det läggs på utanför och gör allt större)
@@ -57,7 +74,6 @@ text-wrap: balance;          på h1, h2 osv bättre balanserade headlines
 hemsidor för att kolla
 vilken CSS unit: Whatunit.com
 fonts/typsnitt: fonts.google.com
-
 
 
  
