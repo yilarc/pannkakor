@@ -4,11 +4,44 @@
   box-sizing: border-box;
 }
 
-/*backgrundsfärg, typsnitt och margin*/
+/* Importera Playfair Display från Google Fonts */
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Default font for the entire website */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+/* Font for all headings */
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Individual heading sizes */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/*backgrundsfärg och margin*/
 body {
   margin: 0;
   background-color: rgb(229, 171, 180);
-  font-family: Arial, sans-serif;
 }
 
 /* Skip link */
@@ -68,6 +101,13 @@ h1 {
   color: rgb(166, 33, 33);
 }
 
+h2,
+p,
+.checkbox-list,
+ol {
+  margin: 0 0 1.25rem;
+}
+
 /* ul används inte längre, ersatt med checkbox-list 
 ul {
   display: inline-block;
@@ -91,14 +131,9 @@ ol {
 
 li + li {
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-h2,
-p,
-.checkbox-list,
-ol {
-  margin: 0 0 1.25rem;
-}
 
 /* Bilder */
 .image-width {
