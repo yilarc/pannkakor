@@ -14,14 +14,15 @@
 /* ==========================
     Import font from Google Fonts 
 ========================== */
+
 .font {
   font-family: "Playfair Display", serif;
 }
 
-
 /* ==========================
     Skip link 
 ========================== */
+
 .skip-link {
   position: absolute;
   top: -7rem;
@@ -29,7 +30,7 @@
   z-index: 1000;
 
   padding: 0.75rem 1.5rem;
-  background: var(--color-white);
+  background: var(--color-box);
   color: var(--color-black);
   font-weight: 700;
   border: 0.125rem solid var(--color-black);
@@ -70,8 +71,6 @@
     --padding-large: 2rem;*/
 }
 
-
-
 /* ==========================
    Navigation
    ========================== */
@@ -94,16 +93,15 @@
     color: var(--color-title);
 }
 
-
 /* ==========================
 Font and size for the entire website 
 ==========================*/
+
 body {
   font-family: var(--font-body);
   font-size: var(--font-size-small);
   line-height: 1.25;
 }
-
 
 h1, h2, h3, h4 {
   font-family: var(--font-title);
@@ -128,15 +126,23 @@ h3 {
 /* ==========================
     Background color and margin
 ==========================*/
+
 body {
   margin: 0;
   background-color: var(--color-background);
 }
 
-
+.page {
+  box-sizing: border-box;
+  width: 70%;
+  margin: 0 auto 1.25rem;
+  padding: 1.875rem;
+  background-color: var(--color-white);
+  text-align: left;
+}
 
 /* ==========================
-   Header
+   Header and footer
    ========================== */
 
 .header {
@@ -149,18 +155,17 @@ body {
   text-align: right;
 } 
 
+.footer {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden; 
+}
 
 /* ==========================
-    Main content 
+    Pannkakor
 ==========================*/
-.page {
-  box-sizing: border-box;
-  width: 70%;
-  margin: 0 auto 1.25rem;
-  padding: 1.875rem;
-  background-color: var(--color-white);
-  text-align: left;
-}
 
 /* Recipe description */
 .intro-paragraph {
@@ -172,24 +177,11 @@ body {
   text-align: left;
 }
 
-/* Index page top image */
-.image-container {
-    width: 80%;
-    max-width: 1000px;
-}
-
-.image-container img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
 /* Listor och rubriker */
-h2,
-p,
-.checkbox-list,
-ol {
+.recept h2,
+.recept p,
+.recept .checkbox-list,
+.recept ol {
   margin: 0 0 1.25rem;
 }
 
@@ -251,6 +243,8 @@ li + li {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: 1rem;
+  object-position: 50% 80%;
 }
 
 figcaption {
@@ -259,18 +253,41 @@ figcaption {
   margin-top: 0.2 rem; 
 }
 
-.footer {
-  position: relative;
-  width: 70%;
-  margin: 0 auto;
-  height: auto;
-  overflow: hidden; 
+
+/* ==========================
+    Index page 
+    ==========================*/ 
+
+.image-container {
+    display: grid;
+    grid-template-columns: 1fr
+
 }
 
-/* gör inget? ta bort?
+.image-container img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    object-position: 0% 70%;
+}
+
+.main-page-title {
+    position: absolute;
+    object-fit: cover;
+    text-align: left;
+    margin: 1rem 1rem;
+}
+
+
+/* ==========================
+    Responsive design 
+    ==========================*/
+
+
 @media (max-width: 700px) {
-  .page, .top-container {
+  .page, .header, .footer {
     width: 100%;
   }
 }
-*/
