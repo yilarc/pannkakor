@@ -13,11 +13,10 @@
 
 /* ==========================
     Import font from Google Fonts 
+    hur??
 ========================== */
 
-.font {
-  font-family: "Playfair Display", serif;
-}
+
 
 /* ==========================
     Skip link 
@@ -65,10 +64,10 @@
     --font-size-medium: 1.5rem;
     --font-size-large: 2.5rem;
 
-    /* padding 
-    --padding-small: 1rem;
-    --padding-medium: 1.5rem;
-    --padding-large: 2rem;*/
+    /* spacing */
+    --spacing-small: 1rem;
+    --spacing-medium: 1.25rem;
+    --spacing-large: 1.5rem;
 }
 
 /* ==========================
@@ -77,13 +76,11 @@
 
 .navigation {
   display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  padding: 1rem;
+  gap: var(--spacing-small);
+  padding: var(--spacing-small);
 }
 
 .navigation a {
-  text-decoration: none;
   color: var(--color-black);
   font-size: var(--font-size-small);
   font-weight: bold;
@@ -97,12 +94,6 @@
 Font and size for the entire website 
 ==========================*/
 
-body {
-  font-family: var(--font-body);
-  font-size: var(--font-size-small);
-  line-height: 1.25;
-}
-
 h1, h2, h3, h4 {
   font-family: var(--font-title);
 }
@@ -110,7 +101,7 @@ h1, h2, h3, h4 {
 /* Individual heading sizes */
 h1 {
   font-size: var(--font-size-large);
-  margin: 1.5rem 0 1.25rem;
+  margin-block: var(--spacing-medium);
   color: var(--color-title);
 }
 
@@ -122,23 +113,26 @@ h3 {
   font-size: var(--font-size-medium);
 }
 
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  line-height: 1.25;
+}
 
 /* ==========================
     Background color and margin
 ==========================*/
 
 body {
-  margin: 0;
   background-color: var(--color-background);
 }
 
 .page {
-  box-sizing: border-box;
   width: 70%;
-  margin: 0 auto 1.25rem;
-  padding: 1.875rem;
+  margin-inline: auto;
+  padding: 1.5rem;
   background-color: var(--color-white);
-  text-align: left;
+  text-align: start;
 }
 
 /* ==========================
@@ -148,19 +142,20 @@ body {
 .header {
   position: relative;
   width: 70%;
-  margin: 0 auto;
-  height: auto;
+  margin-inline: auto;
   overflow: hidden; 
   background-color: var(--color-header);
-  text-align: right;
+  text-align: end;
 } 
 
 .footer {
   position: relative;
   width: 70%;
-  margin: 0 auto;
-  height: auto;
+  margin-inline: auto;
   overflow: hidden; 
+  background-color: var(--color-header);
+  text-align: end;
+  padding: var(--spacing-small);
 }
 
 /* ==========================
@@ -171,10 +166,10 @@ body {
 .intro-paragraph {
   box-sizing: border-box;
   max-width: 100%;
-  margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
+  margin-block: var(--spacing-medium);
+  padding: var(--spacing-small) var(--spacing-medium);
   background-color: var(--color-box);
-  text-align: left;
+  text-align: start;
 }
 
 /* Listor och rubriker */
@@ -182,47 +177,46 @@ body {
 .recept p,
 .recept .checkbox-list,
 .recept ol {
-  margin: 0 0 1.25rem;
+  margin-block-end: var(--spacing-medium);
 }
 
-/* ul används inte längre, ersatt med checkbox-list 
-ul {
+.checkbox-list {
   display: inline-block;
-  padding-left: 1em;
-  text-align: left;
-  margin-top: 0.5rem;
+  padding-inline-start: 1em;
+  list-style-type: none;
 }
-*/
+
 
 ol {
   display: inline-block;
-  padding-left: 2em;
-  text-align: left;
-  margin: 0 0 0.5rem;
+  padding-inline-start: 2em;
+  text-align: start;
 }
 
-.checkbox-list div {
-  margin-top: 0.5rem;
-  padding-left: 1em;
+
+.checkbox-list input:checked + span {
+  text-decoration: line-through;
+  color: gray;
 }
+
 
 li + li {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-block-start: 0.5rem;
 }
 
 
 /* Bilder */
 .image-width {
   width: 100%;
-  margin: 0 auto;
+  margin-inline: auto;
 }
 
 .top-image {
   display: block;
-  width: calc(100% + 3.75rem);
+  width: calc(100% + 3rem);
   aspect-ratio: 2 / 1;
-  margin: -1.875rem -1.875rem 0;
+  margin-block-start: -1.5rem;
+  margin-inline: -1.5rem;
 }
 
 .top-image img {
@@ -235,7 +229,7 @@ li + li {
 .bottom-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem; 
+  gap: var(--spacing-medium); 
 }
 
 .bottom-images img {
@@ -248,9 +242,9 @@ li + li {
 }
 
 figcaption {
-  text-align: left;
+  text-align: start;
   font-style: italic;
-  margin-top: 0.2 rem; 
+  margin-block-start: 0.4rem; 
 }
 
 
@@ -276,8 +270,8 @@ figcaption {
 .main-page-title {
     position: absolute;
     object-fit: cover;
-    text-align: left;
-    margin: 1rem 1rem;
+    text-align: start;
+    margin: 1.5rem 1.5rem;
 }
 
 

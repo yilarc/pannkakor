@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="Style.css">
 </head>
 
-<body>
+<body class="recept">
   <a href="#main-content" class="skip-link">
       Hoppa till huvudinnehåll</a>
   
@@ -31,36 +31,41 @@
     <section id="ingredients">
       <h2>Ingredienser</h2>
       <p>För 4 portioner</p>
-      <div class="checkbox-list">
-        <div><label><input type="checkbox"> 2 1/2 dl vetemjöl </label></div>
-        <div><label><input type="checkbox"> 6 dl mjölk</label></div>
-        <div><label><input type="checkbox"> 1/2 tsk salt</label></div>
-        <div><label><input type="checkbox"> 3 ägg</label></div>
-        <div><label><input type="checkbox"> sylt, bär eller frukt</label></div>
-        <div><label><input type="checkbox"> smör till stekning</label></div>
-      </div>
+      <ul class="checkbox-list">
+        <li><label><input type="checkbox"/><span> 2 1/2 dl vetemjöl</span></label></li>
+        <li><label><input type="checkbox"/><span> 6 dl mjölk</span></label></li>
+        <li><label><input type="checkbox"/><span> 1/2 tsk salt</span></label></li>
+        <li><label><input type="checkbox"/><span> 3 ägg</span></label></li>
+        <li><label><input type="checkbox"/><span> sylt, bär eller frukt</span></label></li>
+        <li><label><input type="checkbox"/><span> smör till stekning</span></label></li>
+      </ul>
     </section>
 
     <section id="instructions">
       <h2>Så här gör du</h2>
       <ol>
         <li>Blanda mjöl och salt i en bunke</li>
-        <li>Andra numrerade punkten</li>
-        <li>Tredje punkten</li>
-        <li>Fjärde punkten</li>
-        <li>Femte punkten</li>
-        <li>Sjätte punkten</li>
+        <li>Vispa i hälften av mjökken till en slät smet</li>
+        <li>Vispa i resten av mjölken och äggen</li>
+        <li>Låt smeten vila i 10 minuter</li>
+        <li>Stek tunna pannkakor i lite smör</li>
+        <li>Servera med sylt, bär eller frukt</li>
       </ol>
     </section>
       
-    <section id="servering suggestions">
-      <h3>Serveringsförslag</h3>
-      <figure class="image-width bottom-images">
-        <img src="images/pancakes-left.jpg" alt="Pannkakor med jordgubbar">
-        <img src="images/pancakes-right.jpg" alt="Pannkakor med hallon och grädde">
-        <figcaption>Servera pannkakorna med sylt, bär eller frukt.</figcaption>
-        <figcaption>Serveringsförslag.</figcaption>
-      </figure>
+    <section id="suggestions">
+      <h2>Serveringsförslag</h2>
+      <div class="bottom-images">
+        <figure>
+          <img src="images/pancakes-left.jpg" alt="Pannkakor med jordgubbar">
+          <figcaption>Pannkakor med jordgubbar.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/pancakes-right.jpg" alt="Pannkakor med hallon och grädde">
+          <figcaption>Pannkakor med hallon och grädde.</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
