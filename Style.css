@@ -65,6 +65,7 @@
     --font-size-large: 2.5rem;
 
     /* spacing */
+    --spacing-xsmall: 0.5rem;
     --spacing-small: 1rem;
     --spacing-medium: 1.25rem;
     --spacing-large: 1.5rem;
@@ -76,6 +77,7 @@
 
 .navigation {
   display: flex;
+  justify-content: flex-end;
   gap: var(--spacing-small);
   padding: var(--spacing-small);
 }
@@ -101,7 +103,7 @@ h1, h2, h3, h4 {
 /* Individual heading sizes */
 h1 {
   font-size: var(--font-size-large);
-  margin-block: var(--spacing-medium);
+  margin-block-end: var(--spacing-medium);
   color: var(--color-title);
 }
 
@@ -145,7 +147,7 @@ body {
   margin-inline: auto;
   overflow: hidden; 
   background-color: var(--color-header);
-  text-align: end;
+
 } 
 
 .footer {
@@ -162,48 +164,72 @@ body {
     Pannkakor
 ==========================*/
 
-/* Recipe description */
-.intro-paragraph {
-  box-sizing: border-box;
-  max-width: 100%;
-  margin-block: var(--spacing-medium);
-  padding: var(--spacing-small) var(--spacing-medium);
-  background-color: var(--color-box);
-  text-align: start;
-}
 
 /* Listor och rubriker */
-.recept h2,
-.recept p,
-.recept .checkbox-list,
-.recept ol {
+.recept :is(h2, p, ol, .checkbox-list, .top-image) {
   margin-block-end: var(--spacing-medium);
 }
 
 .checkbox-list {
   display: inline-block;
-  padding-inline-start: 1em;
   list-style-type: none;
 }
-
-
-ol {
-  display: inline-block;
-  padding-inline-start: 2em;
-  text-align: start;
-}
-
 
 .checkbox-list input:checked + span {
   text-decoration: line-through;
   color: gray;
 }
 
-
-li + li {
-  margin-block-start: 0.5rem;
+ol {
+  display: inline-block;
+  padding-inline-start: 1em;
+  text-align: start;
 }
 
+li + li {
+  margin-block-start: var(--spacing-xsmall);
+}
+
+/* Kolumner av sektioner/artiklar*/
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+}
+
+.intro-paragraph {
+  max-width: 100%;
+  padding: var(--spacing-small) var(--spacing-small);
+  background-color: var(--color-box);
+  text-align: start;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  gap: var(--spacing-xsmall);
+  margin-block-end: var(--spacing-medium);
+}
+
+.card {
+  background-color: var(--color-header);
+  padding: var(--spacing-small);
+  flex: 1;
+}
+
+
+
+.recipe-info {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+.ingredients, .instructions, .top-image, .intro-text {
+    width: 49%;
+}
 
 /* Bilder */
 .image-width {
@@ -212,11 +238,7 @@ li + li {
 }
 
 .top-image {
-  display: block;
-  width: calc(100% + 3rem);
-  aspect-ratio: 2 / 1;
-  margin-block-start: -1.5rem;
-  margin-inline: -1.5rem;
+  aspect-ratio: 1 / 1;
 }
 
 .top-image img {
@@ -224,6 +246,7 @@ li + li {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 1rem;
 }
 
 .bottom-images {
@@ -255,7 +278,6 @@ figcaption {
 .image-container {
     display: grid;
     grid-template-columns: 1fr
-
 }
 
 .image-container img {
@@ -280,8 +302,14 @@ figcaption {
     ==========================*/
 
 
-@media (max-width: 700px) {
-  .page, .header, .footer {
+@media (max-width: 800px) {
+  .page, .header, .footer, .top-image, .intro-text, .ingredients, .instructions {
     width: 100%;
+    }
+  .recipe-info, .intro {
+      flex-direction: column;
+      width: 100%;
+
+  } 
+
   }
-}
