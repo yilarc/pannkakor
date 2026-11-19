@@ -86,10 +86,12 @@
   color: var(--color-black);
   font-size: var(--font-size-small);
   font-weight: bold;
+  text-decoration: none;
 }
 
 .navigation a:hover {
     color: var(--color-title);
+    text-decoration: underline;
 }
 
 /* ==========================
@@ -228,14 +230,10 @@ li + li {
 }
 
 .ingredients, .instructions, .top-image, .intro-text {
-    width: 49%;
+    width: 48%;
 }
 
 /* Bilder */
-.image-width {
-  width: 100%;
-  margin-inline: auto;
-}
 
 .top-image {
   aspect-ratio: 1 / 1;
@@ -246,7 +244,7 @@ li + li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
 }
 
 .bottom-images {
@@ -260,7 +258,7 @@ li + li {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   object-position: 50% 80%;
 }
 
@@ -275,27 +273,108 @@ figcaption {
     Index page 
     ==========================*/ 
 
-.image-container {
+.main-img {
     display: grid;
     grid-template-columns: 1fr
-}
+    width: 70%;
+    grid-template-areas: "stack";
+    place-items: center;
 
-.image-container img {
+  img {
     display: block;
     width: 100%;
-    aspect-ratio: 2 / 1;
     object-fit: cover;
     border-radius: 1rem;
-    object-position: 0% 70%;
+    max-height: 600px;
+    grid-area: stack;
+  }
+
+  .main-title {
+    /* position: absolute;
+    object-fit: cover;*/
+    height: max-content;
+    width: 100%;
+    text-align: center; 
+    color:#eee;
+
+    grid-area: stack;
+
+    h2 {
+      font-size:50px;
+    }
+    
+  }
 }
 
-.main-page-title {
-    position: absolute;
-    object-fit: cover;
-    text-align: start;
-    margin: 1.5rem 1.5rem;
+.links { 
+    padding-block: 1rem;
 }
 
+.link {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: center;  
+}
+
+.link a {
+    color:black;
+    background-color:var(--color-header);
+    border-radius: 1rem;
+    padding-block: var(--spacing-xsmall);
+    padding-inline: var(--spacing-small);
+}
+
+.link a:hover {
+    color:var(--color-title);
+}
+
+.recommendations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+
+  .item {  
+    display: grid;
+    place-items: center; 
+    grid-template-areas: "stack";
+    aspect-ratio: 1/1;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    grid-area: stack;
+    border-radius: 1rem;
+  }  
+
+  .description {
+    height: :max-content;
+    padding: 1rem;
+    width: 100%;
+    grid-area: stack;
+    text-align: center;
+    font-weight: bold;
+    background-color:#ffffffb5;
+
+
+    p {
+      color:black;
+    }
+
+    a {
+      color:black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color:var(--color-title);
+    }
+  }
+}
+}
 
 /* ==========================
     Responsive design 
@@ -313,3 +392,8 @@ figcaption {
   } 
 
   }
+/* Gör till mobil version
+
+@media (width >=48rem) {
+
+} */
