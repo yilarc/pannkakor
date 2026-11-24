@@ -1,0 +1,79 @@
+                                                Vecka 1
+
+(Ctrl+Shift+I) eller högerklicka + inspect för att se hemsidas html
+
+-> lighthouse, desktop kolla accessibility och hastighet mm
+
+
+li*10 → creates 10 list items.
+li*6 → creates 6 list items. 
+This feature is called Emmet. It is built into Visual Studio Code and makes writing HTML much faster
+li = list item (tex i en punktlista eller numrerad lista)
+
+
+WebAIM: Contrast Checker
+Wave evaluation tool i browser
+
+
+<a href="#main-content" class="skip-link">Hoppa till innehållet</a>
+
+
+Shortcuts i VS code
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
+
+li + li   An <li> immediately following another <li>
+li ~ li   All <li> elements following another <li> (not necessarily immediately)
+ul li     All <li> elements inside a <ul>, at any depth
+ul > li   Only <li> elements directly inside a <ul>
+ul, ol    Both <ul> and <ol> elements
+
+
+Easy way to remember
+, = OR (select multiple things)
+~ = any following sibling
++ = immediately next sibling
+> = direct child
+(space) = descendant
+
+
+                                                Vecka 2
+
+
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+box-sizing: border-box;
+gör boxen så stor du anger, all padding och border sker inne i boxen 
+(default är att det läggs på utanför och gör allt större)
+
+
+img {
+display: block;
+max-width: 100%;
+}
+gör img, picture, video etc responsiv, alltså blir mindre om man minskar förstret, block tar bort extra space under bilder
+
+
+text-wrap: pretty;             på p lämnar ej ett ord i slutet av en mening på egen rad
+text-wrap: balance;          på h1, h2 osv bättre balanserade headlines
+
+
+hemsidor för att kolla
+vilken CSS unit: Whatunit.com
+fonts/typsnitt: fonts.google.com
+
+
+ 
