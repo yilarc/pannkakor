@@ -281,7 +281,6 @@ figcaption {
 .hero, .main-img {
     display: grid;
     grid-template-columns: 1fr;
-    width: 70%;
     grid-template-areas: "stack";
     place-items: center;
 
@@ -309,6 +308,14 @@ figcaption {
     }
     
   }
+}
+
+.hero {
+  width: 100%;
+}
+
+.main-img {
+  width: 70%;
 }
 
 .links { 
