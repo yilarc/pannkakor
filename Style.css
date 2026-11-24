@@ -72,7 +72,7 @@
 }
 
 /* ==========================
-   Navigation
+   Navigation header
    ========================== */
 
 .navigation {
@@ -95,6 +95,45 @@ a:hover {
 .menu {
   display: flex;
   gap: 1rem;
+}
+
+}
+
+/* ==========================
+   Navigation footer
+   ========================== */
+
+.footnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-block-start: 0.5rem;
+
+a {
+  color: var(--color-black);
+  font-size: var(--font-size-small);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-title);
+  text-decoration: underline;
+}
+
+.footnote {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap:0.5rem;
+  padding-inline-start: 1rem;
+}
+
+.footlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  padding-inline-end: 1rem;
 }
 
 }
@@ -175,7 +214,7 @@ body {
 
 
 /* Listor och rubriker */
-.recept :is(h2, p, ol, .checkbox-list, .top-image) {
+.recept .page :is(h2, p, ol, .checkbox-list, .top-image) {
   margin-block-end: var(--spacing-medium);
 }
 
@@ -312,10 +351,6 @@ figcaption {
   }
 }
 
-.hero {
-  width: 100%;
-}
-
 .links { 
     padding-block: 1rem;
 }
@@ -444,7 +479,7 @@ input:user-valid {
 
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: orange;
+  accent-color: black;
 }
 }
 /* ==========================
