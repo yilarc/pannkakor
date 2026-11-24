@@ -110,16 +110,18 @@ h1, h2, h3, h4 {
 /* Individual heading sizes */
 h1 {
   font-size: var(--font-size-large);
-  margin-block-end: var(--spacing-medium);
+  margin-block-end: var(--spacing-small);
   color: var(--color-title);
 }
 
 h2 {
   font-size: var(--font-size-medium);
+  margin-block-end: var(--spacing-xsmall);
 }
 
 h3 {
   font-size: var(--font-size-medium);
+  margin-block-end: var(--spacing-xsmall);
 }
 
 body {
@@ -278,7 +280,7 @@ figcaption {
     Index page 
     ==========================*/ 
 
-.hero, .main-img {
+.hero {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "stack";
@@ -312,10 +314,6 @@ figcaption {
 
 .hero {
   width: 100%;
-}
-
-.main-img {
-  width: 70%;
 }
 
 .links { 
@@ -393,10 +391,62 @@ figcaption {
     Förslag-sida
     ==========================*/
 
+.suggestions {
 
 
+legend {
+  padding-inline: 0.5rem;
+}
 
+form {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem;
+}
 
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+input:not([type="checkbox"], [type="radio"]),
+select,
+textarea {
+  width: 100%;
+  padding: 0.3rem;
+  border: 1px solid #888;
+  border-radius: 4px;
+  margin-block-end: 0.5rem;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: #dc2626;
+}
+
+input:user-valid {
+  border-color: green;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: orange;
+}
+}
 /* ==========================
     Responsive design 
     ==========================*/
