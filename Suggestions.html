@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="sv-SE">
+  
+<head>
+  <meta charset="utf-8" />
+  <title>Förslag</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body class="suggestions">
+    <a href="#main-content" class="skip-link">
+         Hoppa till huvudinnehåll</a>
+
+    <header class="header"> 
+       <nav class="navigation">
+           <a href="Index.html">Receptbanken</a>
+           <div class="menu">
+             <a href="Recept.html">Recept</a>
+             <a href="Om-oss.html">Om oss</a>
+             <a href="Suggestions.html">Förslag</a>
+           </div>
+       </nav>
+    </header> 
+
+    <main class="page">
+
+        <h1>Dela ditt recept</h1>
+        <h2>Kort intro till formuläret</h2>
+        
+        <form action="" method="get">
+            <fieldset>
+                <legend>Om receptet</legend>
+                <div> 
+                    <label for="name">Receptets namn</label>
+                </div>
+                <div> 
+                    <input type="text" id="name" name="name" placeholder="Lasagne" required minlength="3" maxlength="30">
+                </div>
+                <div> 
+                    <label for="category">Kategori</label>
+                </div>
+                <div> 
+                    <select id="category" name="category">
+                        <option value="">Välj ett alternativ</option>
+                        <option value="html">Frukost</option>
+                        <option value="javascript">Middag</option>
+                        <option value="accessibility">Efterrätt</option>
+                    <select>
+                </div>
+                <div> 
+                    <label for="time">Tid i minuter</label>
+                    <input type="text" id="time" name="time" required>
+
+                    <label for="portions">Antal portioner</label>
+                    <input type="text" id="portions" name="portions" required>
+                </div>
+            </fieldset> 
+
+            <fieldset>
+                <legend>Svårighetsgrad</legend>
+                <div>
+                  <input type="radio" id="easy" name="difficulty" value="easy">
+                  <label for="east">Lätt</label>
+
+                  <input type="radio" id="intermediate" name="difficulty" value="intermediate">
+                  <label for="intermediate">Medel</label>
+
+                  <input type="radio" id="advanced" name="difficulty" value="advanced">
+                  <label for="advanced">Avancerad</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Receptet</legend>
+                <div> 
+                    <label for="ingredients">Ingredienser</label>
+                    <textarea id="message" name="message" rows="1" cols="80" required></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" required></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" required></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" ></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" ></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" ></textarea>
+                </div>
+                <div>
+                    <label for="instructions">Gör så här</label>
+                    <textarea id="message" name="message" rows="1" cols="80" required></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" required></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" required></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" ></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" ></textarea>
+                    <textarea id="message" name="message" rows="1" cols="80" ></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Om dig</legend>
+                <div> 
+                    <label for="name">Ditt namn</label>
+                </div>
+                <div>     
+                    <input type="text" id="name" name="name" required minlength="3" maxlength="30" autocomplete="name">
+                </div>
+                <div> 
+                    <label for="email">E-post</label>
+                </div>
+                <div> 
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required minlength="3" maxlength="30" autocomplete="email">
+                </div>
+            </fieldset>
+
+            <button>Skicka recept</button>
+        </form>
+    </main>
+
+</body>

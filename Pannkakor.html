@@ -1,44 +1,91 @@
 <!doctype html>
 <html lang="sv-SE">
-  <head>
-    <meta charset="utf-8" />
-    <title>Pannkakor</title>
-    <link rel="stylesheet" href="PannkakorStyle.css">
-  </head>
-  <body>
-    <main class="page">
-    <img class="image-width top-image"
-       src="images/pancakes-top.jpg"
-       alt="A stack of pancakes">
-    <h1>Enkelt recept på pannkakor</h1>
-    <p class="intro-paragraph">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
-
-<h2>Ingredienser</h2>
-<p>För 4 portioner</p>
-<ul>
-  <li>2 2/1 dl vetemjöl</li>
-  <li>6 dl mjölk</li>
-  <li>1/2 tsk salt</li>
-  <li>3 ägg</li>
-  <li>sylt, bär eller frukt</li>
-  <li>smör till stekning</li>
-</ul>
-
-<h2>Så här gör du</h2>
-<ol>
-  <li>Blanda mjöl och salt i en bunke</li>
-  <li>Andra numrerade punkten</li>
-  <li>Tredje punkten</li>
-  <li>Fjärde punkten</li>
-  <li>Femte punkten</li>
-  <li>Sjätte punkten</li>
-</ol>
   
-<h2>Serveringsförslag</h2>
-<div class="image-width bottom-images">
-    <img src="images/pancakes-left.jpg" alt="Pancakes with toppings">
-    <img src="images/pancakes-right.jpg" alt="Pancakes with toppings">
-  </div>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Pannkakor</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body class="recept">
+  <a href="#main-content" class="skip-link">
+      Hoppa till huvudinnehåll</a>
+  
+  <header class="header"> 
+    <nav class="navigation">
+        <a href="Index.html">Receptbanken</a>
+        <div class="menu">
+          <a href="Recept.html">Recept</a>
+          <a href="Om-oss.html">Om oss</a>
+          <a href="Suggestions.html">Förslag</a>
+        </div>
+    </nav>
+  </header> 
+
+  <main class="page">
+    
+    <section class="intro">
+      <article class="top-image">
+        <img src="images/pancakes-top.jpg" alt="Pannkakor med blåbär och grädde">
+      </article>
+
+      <article class="intro-text" id="main-content">
+        <h1>Enkelt recept på pannkakor</h1>
+        <p class="intro-paragraph">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
+        <div class="cards">
+          <article class="card"><h4> 4 port</h4></article>
+          <article class="card"><h4> 30 minuter</h4></article>
+          <article class="card"><h4> Lätt</h4></article>
+        </div>
+      </article>
+    </section>
+
+    <section class="recipe-info">
+      <article class="ingredients">
+        <h2>Ingredienser</h2>
+        <p>För 4 portioner</p>
+        <ul class="checkbox-list">
+          <li><label><input type="checkbox"/><span> 2 1/2 dl vetemjöl</span></label></li>
+          <li><label><input type="checkbox"/><span> 6 dl mjölk</span></label></li>
+          <li><label><input type="checkbox"/><span> 1/2 tsk salt</span></label></li>
+          <li><label><input type="checkbox"/><span> 3 ägg</span></label></li>
+          <li><label><input type="checkbox"/><span> sylt, bär eller frukt</span></label></li>
+          <li><label><input type="checkbox"/><span> smör till stekning</span></label></li>
+        </ul>
+      </article>
+
+      <article class="instructions">
+        <h2>Så här gör du</h2>
+        <ol>
+          <li>Blanda mjöl och salt i en bunke</li>
+          <li>Vispa i hälften av mjökken till en slät smet</li>
+          <li>Vispa i resten av mjölken och äggen</li>
+          <li>Låt smeten vila i 10 minuter</li>
+          <li>Stek tunna pannkakor i lite smör</li>
+          <li>Servera med sylt, bär eller frukt</li>
+        </ol>
+      </article>
+    </section>
+      
+    <section class="suggestions">
+      <h2>Serveringsförslag</h2>
+      <div class="bottom-images">
+        <figure>
+          <img src="images/pancakes-left.jpg" alt="Pannkakor med jordgubbar">
+          <figcaption>Serveringsförslag 1 med bär.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/pancakes-right.jpg" alt="Pannkakor med hallon och grädde">
+          <figcaption>Serveringsförslag 2 med bär och grädde.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Copyright © 2026</p>
+  </footer>
+
+</body>
 </html>
