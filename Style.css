@@ -60,7 +60,8 @@
     --font-body: Arial, sans-serif;
 
     /* Font sizes */
-    --font-size-small: 1rem;
+    --font-size-xsmall: 1rem;
+    --font-size-small: 1.25rem;
     --font-size-medium: 1.5rem;
     --font-size-large: 2.5rem;
 
@@ -82,7 +83,7 @@
 
 a {
   color: var(--color-black);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-xsmall);
   font-weight: bold;
   text-decoration: none;
 }
@@ -105,12 +106,13 @@ a:hover {
 
 .footnav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   padding-block-start: 0.5rem;
+  gap: 2rem;
 
 a {
   color: var(--color-black);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-xsmall);
   font-weight: bold;
   text-decoration: none;
 }
@@ -119,8 +121,9 @@ a:hover {
   color: var(--color-title);
   text-decoration: underline;
 }
+}
 
-.footnote {
+.footnote, .footlinks {
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -128,15 +131,17 @@ a:hover {
   padding-inline-start: 1rem;
 }
 
-.footlinks {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-  padding-inline-end: 1rem;
+.footnote p,
+.footlinks p {
+  margin-block-end: 1rem;
 }
 
+.copyright {
+  text-align: end;
+  grid-column: 1/3;
 }
+
+
 
 /* ==========================
 Font and size for the entire website 
@@ -159,13 +164,13 @@ h2 {
 }
 
 h3 {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   margin-block-end: var(--spacing-xsmall);
 }
 
 body {
   font-family: var(--font-body);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-xsmall);
   line-height: 1.25;
 }
 
@@ -333,7 +338,7 @@ figcaption {
     grid-area: stack;
   }
 
-  .hero-text, .main-title {
+  .hero-text {
     /* position: absolute;
     object-fit: cover;*/
     height: max-content;
