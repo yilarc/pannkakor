@@ -204,7 +204,6 @@ body {
   margin-inline: auto;
   overflow: hidden; 
   background-color: var(--color-header);
-  text-align: end;
   padding: var(--spacing-small);
 }
 
